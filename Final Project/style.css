@@ -1,0 +1,124 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #b6a189;
+}
+
+#digitalClock{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 10px;
+}
+
+#digitalClock div{
+    position: relative;
+    background-color: white;
+    width: 110px;
+    height: 100px;
+    text-align: center;
+    line-height: 95px;
+    font-size: 45px;
+    box-shadow: 0px 10px 15px 5px rgba(0,0,0,0.2);
+    border: 1px solid white;
+    border-radius: 15px;
+    color: black;
+    font-family: 'Orbitron', sans-serif;
+}
+
+#digitalClock .colon{
+    width: 25px;
+    background-color: transparent;
+    box-shadow: none;
+    border: none ;
+}
+
+#digitalClock div::before{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    font-size: 15px;
+    color: black;
+    letter-spacing: 1px;
+}
+
+#digitalClock .hours::before{
+    content: "Hours";
+}
+
+#digitalClock .minutes::before{
+    content: "Minutes";
+}
+
+#digitalClock .seconds::before{
+    content: "Seconds";
+}
+
+i{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media ( max-width: 564px){
+    #digitalClock div{
+        width: 55px;
+        height: 50px;
+        line-height: 45px;
+        font-size: 22px;
+        border-radius: 10px;
+    }
+    
+    #digitalClock .colon{
+        width: 5px;
+    }
+
+    #digitalClock div::before{
+        height: 15px;
+        line-height: 15px;
+        font-size: 7px;
+    }
+
+    i{
+        font-size: 15px;
+    }
+}
+
+
