@@ -11,7 +11,21 @@
     <title>Digital Clock using JavaScript</title>
 </head>
 <body>
+        <!-- Icon details -->
+        <i id="speech" class="btn bi bi-volume-up-fill"></i>
         <i id="switchMode" class="bi bi-brightness-high-fill"></i>
+
+
+        <!-- Setting the date details -->
+        <div id="date">
+            <span id="dayname" class="day"></span>, 
+            <span id="month" class="mon"></span>
+            <span id="dayNum" class="num"></span>, 
+            <span id="year" class="yr"></span>
+        </div>
+
+
+        <!-- Setting the time details -->
         <div id="digitalClock">
             <div class="hours"></div>
             <div id="dotOne" class="colon">:</div>
@@ -20,14 +34,17 @@
             <div class="seconds"></div>
             <div id="dotThree" class="colon">:</div>
             <div class="TimePeriod"></div>
-        
-            
-            <section class="controls">
-                <input name="alarmTime" type="datetime-local">
-                <button class="button setAlarm">Set Alarm</button>
-                <button class="button clearAlarm">Clear Alarm</button>
-        </section>
         </div>
+
+
+        <!-- setting the alarm details -->
+    <div class="container">
+        <input id="input" onchange="setAlarmTime(this.value)"name="alarmTime" type="datetime-local">
+        <div class="controls">
+            <button onclick="setAlarm()" id="blue" class="button setAlarm">Set Alarm</button>
+            <button onclick="clearAlarm()" id="red" class="button clearAlarm">Clear Alarm</button>
+        </div>
+    </div>
     
     <script src="script.js"></script>
 </body>
